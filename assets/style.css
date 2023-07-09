@@ -1,0 +1,206 @@
+:root {
+  --bottom-adjust: 2em;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  background-color: #efefef;
+}
+
+body {
+  width: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+header {
+ padding: 5px 20px;
+}
+
+.page-section {
+  padding: 0 20px 20px 20px;
+}
+h1 {
+  margin-bottom: 0;
+}
+h2 {
+  margin-top: 0;
+}
+
+.slideshow-outer-wrap {
+  /* padding: 0 20px 20px 20px; */
+  margin: 0 20px 20px 20px;
+  overflow: hidden;
+}
+
+.slideshow-parent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* max-width: 800px; */
+  /* margin: 2em auto; */
+}
+
+.carousel {
+  display: flex;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.25s ease-in-out;
+  /* transition: transform 0.5s cubic-bezier(1.000, 0.000, 0.580, 1.000); */
+}
+
+.slide {
+  padding: 0;
+  /* background: #550101; */
+  flex: 1 0 100%;
+  order: 2;
+  line-height: 0;
+}
+
+.slide a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.slide img {
+  /* max-width: 100%; */
+  width: 100%;
+  height: auto;
+}
+
+/* .slide.is-ref {
+  order: 1;
+} */
+
+.indicator {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  /* background-color: #333; */
+  /* background-color: gold; */
+  background-color: #ea0029;
+  /* background-color: #666; */
+  /* transition: width 0ms linear; */
+  transition-property: width;
+  transition-duration: 0ms;
+  transition-timing-function: linear;
+}
+
+.indicator.progress {
+  visibility: visible;
+  /* transition-property: width; */
+  /* transition-timing-function: steps(var(--steps), jump-none); */
+  /* transition: width var(--duration) steps(var(--steps), jump-none); */
+  width: 100%;
+}
+
+.controls {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.controls.hideme {
+  opacity: 0;
+}
+
+.controls button, .playToggle {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5em;
+  position: absolute;
+  cursor: pointer;
+}
+.playToggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  line-height: 0;
+  padding: 0;
+}
+
+.playToggle svg {
+  fill: hsl(0, 0%, 50%);
+}
+
+.hideme {
+  display: none !important;
+}
+
+.nextButton {
+  right:0;
+}
+.controls button svg, .playToggle svg {
+  height: auto;
+  max-width: 30px;
+}
+.controls button svg polyline{
+  stroke: #ffffff;
+}
+.controls button:hover, .controls button:focus {
+  background-color: hsla(0, 0%, 67%, 0.6);
+}
+
+.pagination {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  bottom: 0;
+  color: hsl(0, 0%, 50%);
+  /* background-color: hsla(0, 0%, 0%, 0.6); */
+  /* padding: .5em; */
+  height: var(--bottom-adjust);
+}
+
+
+/* move bottom items down */
+.slideshow-parent {
+  padding-bottom: var(--bottom-adjust);
+}
+.indicator {
+  bottom: var(--bottom-adjust);
+}
+
+/* .columns {
+  font-size: 10px;
+  column-count: 2;
+  column-gap: 2em;
+  text-align: justify;
+}
+.columns p:first-of-type {
+  padding: 0;
+  margin-top: 0;
+} */
