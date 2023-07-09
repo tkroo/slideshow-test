@@ -30,6 +30,8 @@ class Slideshow {
     
     this.indicator = this.parentEl.querySelector(this.options.indicatorClass);
 
+    this.pagination = this.parentEl.querySelector('.pagination');
+
     // vars
     this.currentSlide = 1;
     this.totalSlides = this.slides.length;
@@ -57,7 +59,7 @@ class Slideshow {
 
     // update pagination
     this.updateCount(this.currentSlide);
-    this.parentEl.querySelector('.total').innerText = this.totalSlides;
+    this.pagination.innerText = `1 of ${this.totalSlides}`;
     
 
     // next and prev buttons
@@ -125,7 +127,7 @@ class Slideshow {
   }
 
   updateCount(c) {
-    this.parentEl.querySelector(".current").innerText = c;
+    this.pagination.innerText = `${c} of ${this.totalSlides}`;
   }
 
   advanceSlides(dir) {
