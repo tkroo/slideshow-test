@@ -10,16 +10,15 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="container">
   <header>
     <h1>Slideshow</h1>
   </header>
   <main>
     <section class="page-section">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi suscipit nemo alias? Inventore sit architecto at impedit sed accusamus commodi dolore quidem ipsam iusto suscipit sunt quo facilis consectetur, ex quam explicabo reiciendis recusandae? Soluta, mollitia. Quia adipisci obcaecati doloribus nostrum neque eius quos quod sit debitis, quis pariatur. Quidem?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi suscipit nemo alias? Inventore sit architecto at impedit sed accusamus commodi dolore quidem ipsam iusto suscipit. Quidem?</p>
     </section>
-    <div class="slideshow-outer-wrap">
+    <section class="page-section">
       <section id="slideshow" class="slideshow-parent" aria-label="image carousel">
         <div class="slides-container carousel is-set">
           <div class="slide">
@@ -54,12 +53,6 @@
               </picture>
             </a>
           </div>
-          <div class="slide">
-            <picture>
-              <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/63-1440x640.webp" />
-              <img src="assets/images/picsum.photos/63-640x640.webp" alt="banner image" />
-            </picture>
-          </div>
         </div>
         <div class='controls'>
           <button class="toggle prevButton">
@@ -80,75 +73,128 @@
         </button>
         <div class="pagination"><span class="current">x</span> of <span class="total">x</span></div>
       </section>
-    </div>
-    <section class="page-section">
-      <h2>todo list:</h2>
-        <pre>
-- [ ] Learn how to better handle touch events.  
-- [ ] Fix indicator animation sometimes firing when it shouldn't. removeEventListener("transitionend") isn't working?  
-- [ ] Update slide advance function to go to specific slide.  
-        <pre>
     </section>
-
-    <!-- <div class="slideshow-outer-wrap">
-      <section id="slideshow2" class="slideshow-parent" aria-label="image carousel">
-        <div class="slides-container carousel is-set">
-          <div class="slide">
-              <picture>
-                <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/63-1440x640.webp" />
-                <img src="assets/images/picsum.photos/63-640x640.webp" alt="banner image" />
-              </picture>
-          </div>
-          <div class="slide">
-            <a href="/foo1">
-              <picture>
-                <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/1011-1440x640.webp" />
-                <img src="assets/images/picsum.photos/1011-640x640.webp" alt="banner image" />
-              </picture>
-            </a>
-          </div>
-          <div class="slide">
-            <a href="/foo2">
-              <picture>
-                <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/82-1440x640.webp" />
-                <img src="assets/images/picsum.photos/82-640x640.webp" alt="banner image" />
-              </picture>
-            </a>
-          </div>
-          <div class="slide">
-            <a href="/foo4">
-              <picture>
-                <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/157-1440x640.webp" />
-                <img src="assets/images/picsum.photos/157-640x640.webp" alt="banner image" />
-              </picture>
-            </a>
-          </div>
-        </div>
-        <div class='controls'>
-          <button class="toggle prevButton">
-            <?xml version="1.0" ?><svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>prev</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Left" points="15.5 5 8.5 12 15.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
-          </button>
-          <button class="toggle nextButton"><?xml version="1.0" ?>
-            <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>next</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Right" points="8.5 5 15.5 12 8.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
-          </button>
-        </div>
-        <div class="indicator"></div>
-        <button class="playToggle">
-          <span class="play">
-            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>play</title><path d="M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z"/></svg>
-          </span>
-          <span class="pause">
-            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>pause</title><path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.44 0.576t-0.576 1.44v16.16zM18.016 24.096q0 0.832 0.608 1.408t1.408 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.408 0.576t-0.608 1.44v16.16z"></path></svg>
-          </span>
-        </button>
-      </section>
-    </div> -->
+    <section class="page-section">
+      <h2>More slideshows</h2>
+      <div class="two-columns">
+          <section id="slideshow2" class="slideshow-parent" aria-label="image carousel">
+            <div class="slides-container carousel is-set">
+              <div class="slide">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/23-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/23-640x640.webp" alt="banner image" />
+                  </picture>
+              </div>
+              <div class="slide">
+                <a href="/foo1">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/39-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/39-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="/foo2">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/124-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/124-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="/foo4">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/175-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/175-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class='controls'>
+              <button class="toggle prevButton">
+                <?xml version="1.0" ?><svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>prev</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Left" points="15.5 5 8.5 12 15.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
+              </button>
+              <button class="toggle nextButton"><?xml version="1.0" ?>
+                <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>next</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Right" points="8.5 5 15.5 12 8.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
+              </button>
+            </div>
+            <div class="indicator"></div>
+            <button class="playToggle">
+              <span class="play">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>play</title><path d="M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z"/></svg>
+              </span>
+              <span class="pause">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>pause</title><path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.44 0.576t-0.576 1.44v16.16zM18.016 24.096q0 0.832 0.608 1.408t1.408 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.408 0.576t-0.608 1.44v16.16z"></path></svg>
+              </span>
+            </button>
+            <div class="pagination"><span class="current">x</span> of <span class="total">x</span></div>
+          </section>
+          
+          <section id="slideshow3" class="slideshow-parent" aria-label="image carousel">
+            <div class="slides-container carousel is-set">
+              <div class="slide">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/63-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/63-640x640.webp" alt="banner image" />
+                  </picture>
+              </div>
+              <div class="slide">
+                <a href="/foo1">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/1011-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/1011-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="/foo2">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/82-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/82-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="/foo4">
+                  <picture>
+                    <source media="(min-width: 640px)" srcset="assets/images/picsum.photos/157-1440x640.webp" />
+                    <img src="assets/images/picsum.photos/157-640x640.webp" alt="banner image" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class='controls'>
+              <button class="toggle prevButton">
+                <?xml version="1.0" ?><svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>prev</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Left" points="15.5 5 8.5 12 15.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
+              </button>
+              <button class="toggle nextButton"><?xml version="1.0" ?>
+                <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>next</title><g id="Complete"><g id="F-Chevron"><polyline fill="none" id="Right" points="8.5 5 15.5 12 8.5 19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
+              </button>
+            </div>
+            <div class="indicator"></div>
+            <button class="playToggle">
+              <span class="play">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>play</title><path d="M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z"/></svg>
+              </span>
+              <span class="pause">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>pause</title><path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.44 0.576t-0.576 1.44v16.16zM18.016 24.096q0 0.832 0.608 1.408t1.408 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.408 0.576t-0.608 1.44v16.16z"></path></svg>
+              </span>
+            </button>
+            <div class="pagination"><span class="current">x</span> of <span class="total">x</span></div>
+          </section>
+      </div>
+    </section>
+    <section class="page-section">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui quasi voluptatibus nostrum inventore cumque ea accusantium eveniet. Tempore inventore, laborum pariatur ipsam id libero! Ipsa incidunt amet repellendus aliquid.</p>
+    </section>
     
   </main>
 </div>
 <script src="assets/slideshow.js"></script>
 <script>
-  const mySlideshow = new Slideshow({carouselParentID:"#slideshow", touchEvents: true});
+  const s1 = new Slideshow({carouselParentID:"#slideshow", touchEvents: true});
+  const s2 = new Slideshow({carouselParentID:"#slideshow2", touchEvents: true});
+  const s3 = new Slideshow({carouselParentID:"#slideshow3", touchEvents: true});
 </script>
 <!-- <script type="module">
   import {Slideshow} from "./assets/slideshow.js";

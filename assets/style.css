@@ -1,5 +1,5 @@
 :root {
-  --bottom-adjust: 2em;
+  --bottom-adjust: 2.5em;
 }
 
 html {
@@ -38,14 +38,14 @@ h2 {
 .slideshow-outer-wrap {
   /* padding: 0 20px 20px 20px; */
   margin: 0 20px 20px 20px;
-  overflow: hidden;
 }
 
 .slideshow-parent {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100%;
+  overflow: hidden;
+  /* height: 100%; */
   /* max-width: 800px; */
   /* margin: 2em auto; */
 }
@@ -99,11 +99,7 @@ h2 {
   bottom: 0;
   width: 0;
   height: 3px;
-  /* background-color: #333; */
-  /* background-color: gold; */
-  background-color: #ea0029;
-  /* background-color: #666; */
-  /* transition: width 0ms linear; */
+  background-color: hsl(0, 0%, 50%);
   transition-property: width;
   transition-duration: 0ms;
   transition-timing-function: linear;
@@ -190,17 +186,11 @@ h2 {
 .slideshow-parent {
   padding-bottom: var(--bottom-adjust);
 }
-.indicator {
-  bottom: var(--bottom-adjust);
+.playToggle {
+  bottom: 7px;
 }
 
-/* .columns {
-  font-size: 10px;
-  column-count: 2;
-  column-gap: 2em;
-  text-align: justify;
+.two-columns {
+  display: flex;
+  gap: 1em;
 }
-.columns p:first-of-type {
-  padding: 0;
-  margin-top: 0;
-} */
