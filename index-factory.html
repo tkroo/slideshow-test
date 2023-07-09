@@ -74,7 +74,7 @@
         <div class="pagination"><span class="current">x</span> of <span class="total">x</span></div>
       </section>
     </section>
-    <!-- <section class="page-section">
+    <section class="page-section">
       <h2>More slideshows</h2>
       <div class="two-columns">
           <section id="slideshow2" class="slideshow-parent" aria-label="image carousel">
@@ -183,18 +183,18 @@
             <div class="pagination"><span class="current">x</span> of <span class="total">x</span></div>
           </section>
       </div>
-    </section> -->
+    </section>
     <section class="page-section">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui quasi voluptatibus nostrum inventore cumque ea accusantium eveniet. Tempore inventore, laborum pariatur ipsam id libero! Ipsa incidunt amet repellendus aliquid.</p>
     </section>
     
   </main>
 </div>
-<script src="assets/slideshow.js"></script>
+<script src="assets/slideshow-factory.js"></script>
 <script>
-  const s1 = new Slideshow({carouselParentID:"#slideshow", touchEvents: true});
-  // const s2 = new Slideshow({carouselParentID:"#slideshow2", touchEvents: true});
-  // const s3 = new Slideshow({carouselParentID:"#slideshow3", touchEvents: true});
+  const s1 = Slideshow({carouselParentID:"#slideshow", autoplay: true, speed:3000}).init();
+  const s2 = Slideshow({carouselParentID:"#slideshow2", speed:8000}).init();
+  const s3 = Slideshow({carouselParentID:"#slideshow3"}).init();
 </script>
 <!-- <script type="module">
   import {Slideshow} from "./assets/slideshow.js";
