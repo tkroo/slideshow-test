@@ -8,7 +8,11 @@
 
 
 function Slideshow(el, opts) {
-  console.log(opts)
+  if (typeof el === "object") {
+    opts = el
+    el = opts.el
+  }
+  
   const defaultOptions = {
     el: "#slideshow",
     carouselClass: ".slides-container",
