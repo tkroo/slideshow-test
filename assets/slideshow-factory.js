@@ -7,10 +7,10 @@
 
 
 
-function Slideshow(opts) {
+function Slideshow(el, opts) {
   console.log(opts)
   const defaultOptions = {
-    carouselParentID: "#slideshow",
+    el: "#slideshow",
     carouselClass: ".slides-container",
     slidesClass: ".slide",
     controlsClass: ".controls",
@@ -21,11 +21,15 @@ function Slideshow(opts) {
     speed: 5000,
   };
   const options = Object.assign({}, defaultOptions, opts);
-  
+  if (el) {
+    options.el = el
+  }
+  console.log(`el: ${el}`);
   console.log(`options: ${JSON.stringify(options)}`);
   
   // elements
-  const parentEl = document.querySelector(`${options.carouselParentID}`);
+  const parentEl = document.querySelector(`${options.el}`);
+
   const carousel = parentEl.querySelector(options.carouselClass);
   const slides = Array.from(parentEl.querySelectorAll(options.slidesClass));
   const controls = parentEl.querySelector(options.controlsClass);
@@ -216,5 +220,5 @@ function Slideshow(opts) {
     }, options.speed);
   }
 
-  return { init, getOptions }
+  return { init }
 } // end factory
